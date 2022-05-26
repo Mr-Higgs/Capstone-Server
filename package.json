@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "type": "modal",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.75",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "casual": "^1.6.2",
@@ -22,6 +24,7 @@
     "helmet": "^5.0.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.0.0",
+    "mailchimp": "^1.2.1",
     "migrate": "^1.8.0",
     "mysql": "^2.18.1",
     "passport": "^0.5.2",

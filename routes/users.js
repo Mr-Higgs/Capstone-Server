@@ -109,7 +109,19 @@ router.get('/current', (req, res) => {
     });
 });
 
-
+// ## GET /api/users/current
+// -   Gets information about the currently logged in user.
+// -   Expects valid JWT authentication to run through the "authenticate" middleware
+router.get('/current', authenticate, (req, res) => {
+    knex('users')
+        .where({ email: req.user.email })
+        .first()
+        .then((user) => {
+            // Respond with the user data
+            delete user.password;
+            res.json(user);
+        });
+});
 
 
 
